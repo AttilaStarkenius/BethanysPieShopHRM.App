@@ -1,0 +1,22 @@
+﻿@page "/employeeoverview"
+
+<h2>Employee Overview</h2>
+
+<table class="table table-light">
+    <thead class="table-primary">
+        <tr>
+            <th></th>
+            <th>Employee ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Employees)
+        {
+            <tr>
+                <td>@employee</td>
+            </tr>
+        }
+        </tbody>
+        </table>

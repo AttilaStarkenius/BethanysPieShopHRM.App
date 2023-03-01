@@ -2,6 +2,11 @@
 
 <h2>Employee Overview</h2>
 
+@if (Employees == null)
+{
+    <p><em>Loading ...</em></p>
+}
+
 <table class="table table-light">
     <thead class="table-primary">
         <tr>
@@ -15,7 +20,12 @@
         @foreach (var employee in Employees)
         {
             <tr>
-                <td>@employee</td>
+                <td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")
+                    " class="rounded-circle" /></td>
+                <td>@employee.EmployeeId</td>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+
             </tr>
         }
         </tbody>
